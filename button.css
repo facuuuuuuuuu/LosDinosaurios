@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('charly.jpg'); /* Cambia a la ruta de tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+header:hover{
+    transform: scale(1.05);
+    background-color: rgba(76, 175, 80, 0.5);
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button-container {
+    display: grid; /* Cambia a 'flex' si prefieres usar Flexbox */
+    grid-template-columns: repeat(4, 1fr); /* Para Grid, 4 columnas */
+    /* O para Flexbox: flex-wrap: wrap; justify-content: center; */
+    gap: 15px;  /* Espacio entre los elementos */
+    max-width: 800px;  /* Ancho máximo de la contenedor */
+    margin: 0 auto;  /* Centra el contenedor en la página */
+}
+
+label {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #4CAF50;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    flex-basis: calc(33.333% - 10px); /* Para Flexbox */
+    box-sizing: border-box;  /* Incluye el padding y border en el tamaño total */
+}
+
+label:hover {
+    background-color: rgba(76, 175, 80, 0.5); /* Color de fondo al pasar el cursor */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Espacio entre la casilla y el texto */
+}
+
+.check:checked + span {
+    text-decoration: line-through; /* Tacha el texto si está marcado */
+    color: #999; /* Cambia el color del texto tachado */
+}
